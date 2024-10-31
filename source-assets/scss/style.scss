@@ -1,0 +1,73 @@
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+	scroll-behavior: auto;
+  }
+}
+.mywpglossary-list-entry-description {
+  display: none;
+}
+.mywpglossary-letters {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mywpglossary-letter {
+  margin-right: 1.25rem;
+}
+.mywpglossary-letter:last-child {
+  margin-right: 0;
+}
+.mywpglossary-letters span {
+  opacity: .5;
+}
+.mywpglossary-list-letter {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.mywpglossary-letter-content {
+  display: flex;
+  flex-direction: column;
+}
+.mywpglossary-list-entry-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mywpglossary-list-entry-title svg {
+  transition: all .3s ease-out .07s;
+}
+.mywpglossary-list-entry-title.show_parent svg {
+  transform: rotate(180deg);
+  transition: all .3s ease-out .07s;
+}
+.mywpglossary-list-entry-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mywpglossary-list-entry {
+  cursor: pointer;
+}
+
+/* Pop in display */
+.mywpglossary-popin {
+  position: relative;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.mywpglossary-popin .mywpglossary-content {
+  visibility: hidden;
+  width: 450px;
+  background-color: black;
+  font-size: medium;
+  color: #fff;
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+.mywpglossary-popin:hover .mywpglossary-content {
+  visibility: visible;
+}
